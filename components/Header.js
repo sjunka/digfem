@@ -1,39 +1,35 @@
-import { View, Text } from "react-native";
-import React from "react";
-import { StyleSheet } from 'react-native';
+import {View, Text} from 'react-native';
+import React from 'react';
+import {StyleSheet} from 'react-native';
 // import { globalStyles } from "../utils/GlobalStyle";
 
 const styles = StyleSheet.create({
-    container : {
+    container: {
         flex: 1,
         flexDirection: 'column',
         justifyContent: 'space-between',
-        marginTop   : 20,
-        color: 'black',
+        marginTop: 20,
     },
     text: {
-        fontSize: 30,
+        fontSize: 20,
         fontWeight: 'bold',
+        color: '#020202',
     },
     textAccount: {
-        fontSize: 20,
+        fontSize: 16,
     },
-  });
+});
 
-    const introText = "Bienvenido de vuelta!";
-    const accountText = "Ruben Rodriguez";
+const introText = 'Bienvenido de vuelta!';
+const accountText = 'Ruben Rodriguez';
 
 const Header = () => {
-  return (
-    <View style={styles.container}>
-      <Text  style={styles.text}>
-        {introText}
-      </Text>
-      <Text  style={styles.textAccount}>
-        {accountText}
-      </Text>
-    </View>
-  );
+    return (
+        <View style={styles.container}>
+            <Text style={styles.text}>{introText}</Text>
+            <Text style={styles.textAccount}>{accountText}</Text>
+        </View>
+    );
 };
 
 export default Header;
