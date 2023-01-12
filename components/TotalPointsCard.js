@@ -19,16 +19,20 @@ const styles = StyleSheet.create({
         color: 'white',
     },
     cardShadow: {
+        flex: 1,
+        flexBasis: '70%',
+
         elevation: 10,
         shadowColor: '#000',
         shadowOpacity: 0.9,
         shadowOffset: {width: 0, height: 5},
         shadowRadius: 5,
 
-        flexBasis: '70%',
         backgroundColor: '#334FFA',
         borderRadius: 20,
         marginTop: 10,
+        marginHorizontal: 20,
+        // marginBottom: 20,
     },
     text: {
         fontSize: 16,

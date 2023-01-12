@@ -65,7 +65,7 @@ const MovementListItem = ({productItem = {}, navigation}) => {
         <TouchableWithoutFeedback
             testID="movement-item"
             onPress={() =>
-                navigation.navigate('ProductDetail', {
+                navigation.navigate('Detail', {
                     productItem,
                 })
             }>

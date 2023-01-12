@@ -24,8 +24,9 @@ const styles = StyleSheet.create({
         marginTop: 4,
         borderRadius: 20,
         paddingVertical: 6,
-        paddingHorizontal: 3,
-        marginBottom: 30,
+        paddingHorizontal: 6,
+        marginBottom: 40,
+        marginHorizontal: 6,
     },
 });
 
