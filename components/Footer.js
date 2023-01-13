@@ -1,7 +1,7 @@
-import {View, Text, TouchableWithoutFeedback} from 'react-native';
-import React, {useState} from 'react';
+import { View, Text, TouchableWithoutFeedback } from 'react-native';
+import React, { useState } from 'react';
 
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
@@ -39,14 +39,14 @@ const styles = StyleSheet.create({
     },
 });
 
-const Footer = ({filterTrue, filterFalse, notFiltered}) => {
-    const [isFiltered, setIsFiltered] = useState(true);
+const Footer = ({ filterTrue, filterFalse, notFiltered }) => {
+    const [isFiltered, setIsFiltered] = useState(false);
     return (
         <View style={styles.container}>
             {isFiltered ? (
                 <View style={styles.buttonTodos}>
                     <TouchableWithoutFeedback
-                        testID="button-notFiltered"
+                        testID="footer-button-noFilter"
                         onPress={() => {
                             notFiltered();
                             setIsFiltered(false);
