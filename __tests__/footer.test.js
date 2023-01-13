@@ -1,5 +1,5 @@
-import React from "react";
-import { render, fireEvent } from "@testing-library/react-native";
+import React from 'react';
+import { render, fireEvent } from '@testing-library/react-native';
 
 import Adapter from 'enzyme-adapter-react-16';
 import Enzyme from 'enzyme';
@@ -7,7 +7,7 @@ import { shallow } from 'enzyme';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-import Footer from "../components/Footer";
+import Footer from '../components/Footer';
 
 const mockFilterTrue = jest.fn();
 const mockFilterFalse = jest.fn();
@@ -19,38 +19,40 @@ afterEach(() => {
     mockNotFiltered.mockClear();
 });
 
-describe("Footer", () => {
-    test("Should render correctly", () => {
+describe('Footer', () => {
+    test('Should render correctly', () => {
         const component = render(
             <Footer
                 filterTrue={mockFilterTrue}
                 filterFalse={mockFilterFalse}
                 notFiltered={mockNotFiltered}
-            />
+            />,
         );
         expect(component).toBeDefined();
-        expect(component.getByTestId("button-filterFalse")).toBeDefined();
+        expect(component.getByTestId('button-filterFalse')).toBeDefined();
 
-        expect(component.getByTestId("button-filterTrue")).toBeDefined();
+        expect(component.getByTestId('button-filterTrue')).toBeDefined();
     });
 
-    test("Should not filter with notFiltered", () => {
+    test('Should not filter with notFiltered', () => {
         const component = render(
             <Footer
                 filterTrue={mockFilterTrue}
                 filterFalse={mockFilterFalse}
                 notFiltered={mockNotFiltered}
-            />
+            />,
         );
 
         expect(component).toBeDefined();
-        const buttonFilterFalse = component.getByTestId("button-filterFalse");
-        const buttonFilterTrue = component.getByTestId("button-filterTrue");
+        const buttonFilterFalse = component.getByTestId('button-filterFalse');
+        const buttonFilterTrue = component.getByTestId('button-filterTrue');
 
         fireEvent.press(buttonFilterFalse);
 
         expect(mockFilterFalse).toHaveBeenCalled();
-        const buttonNotFiltered = component.getByTestId("footer-button-noFilter");
+        const buttonNotFiltered = component.getByTestId(
+            'footer-button-noFilter',
+        );
 
         expect(buttonNotFiltered).toBeDefined();
 
@@ -61,10 +63,9 @@ describe("Footer", () => {
         expect(buttonFilterFalse).toBeDefined();
         expect(buttonFilterTrue).toBeDefined();
     });
-
 });
 
-describe('Footer', () => {
+describe('Footer snapshot', () => {
     it('should match snapshot', () => {
         const component = shallow(<Footer />);
         expect(component).toMatchSnapshot();

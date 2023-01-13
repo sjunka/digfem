@@ -1,7 +1,6 @@
 import {View, Text, Image, TouchableWithoutFeedback} from 'react-native';
 import React from 'react';
 import {getDate} from './utils';
-// import {globalStyles} from '../utils/GlobalStyle';
 import {
     ChevronRightIcon,
     PlusSmallIcon,

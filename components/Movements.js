@@ -1,7 +1,7 @@
-import { View, FlatList, Text } from 'react-native';
+import {View, FlatList, Text} from 'react-native';
 import React from 'react';
 import MovementListItem from './MovementListItem';
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
     textNoData: {
@@ -30,11 +30,9 @@ const styles = StyleSheet.create({
 
 const NO_DATA = 'No hay movimientos';
 
-const Movements = ({ products = [], navigation }) => {
+const Movements = ({products = [], navigation}) => {
     return (
-        <View
-            style={styles.flatlistContainer}
-        >
+        <View style={styles.flatlistContainer}>
             {products?.length === 0 || products === undefined ? (
                 <Text style={styles.textNoData}>{NO_DATA}</Text>
             ) : null}
@@ -42,7 +40,7 @@ const Movements = ({ products = [], navigation }) => {
             <FlatList
                 testID="flatlist"
                 data={products}
-                renderItem={({ item }) => {
+                renderItem={({item}) => {
                     return (
                         <View style={styles.movementListItemContainer}>
                             <MovementListItem

@@ -105,7 +105,6 @@ const HomeScreen = ({ navigation }) => {
             </SafeAreaView>
         );
     }
-    var totalPoints2 = 100
 
     return (
         <SafeAreaView style={styles.container}>
@@ -113,7 +112,7 @@ const HomeScreen = ({ navigation }) => {
                 <Header />
             </View>
             <View style={styles.sectionTop2}>
-                <TotalPointsCard totalPoints={totalPoints2} />
+                <TotalPointsCard totalPoints={totalPoints} />
             </View>
             <View style={styles.sectionMiddle}>
                 <Text style={styles.textMovimientos}>{MOVEMENTS}</Text>
