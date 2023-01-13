@@ -8,10 +8,9 @@ import {
     ScrollView,
 } from 'react-native';
 import React from 'react';
-import {getDate} from '../components/utils';
+import { getDate } from '../components/utils';
 // import {globalStyles} from '../utils/GlobalStyle';
-
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
@@ -44,7 +43,7 @@ const styles = StyleSheet.create({
         elevation: 5,
         shadowColor: '#000',
         shadowOpacity: 0.9,
-        shadowOffset: {width: 0, height: 15},
+        shadowOffset: { width: 0, height: 15 },
         shadowRadius: 10,
         paddingHorizontal: 20,
         marginTop: 10,
@@ -103,7 +102,8 @@ const styles = StyleSheet.create({
 
 const NO_DATA = 'No hay data disponible';
 
-const DetailScreen = ({route, navigation}) => {
+const DetailScreen = ({ route, navigation }) => {
+
     if (!route || Object.keys(route.params).length === 0) {
         return (
             <SafeAreaView style={styles.container}>
@@ -122,7 +122,7 @@ const DetailScreen = ({route, navigation}) => {
         );
     }
 
-    const {image, product, createdAt, points, is_redemption} =
+    const { image, product, createdAt, points, is_redemption } =
         route.params.productItem;
     const dateFormated = getDate(createdAt);
 
@@ -140,7 +140,7 @@ const DetailScreen = ({route, navigation}) => {
                 <View style={styles.detailsContainer}>
                     <View style={styles.imageContainer}>
                         <Image
-                            source={{uri: image}}
+                            source={{ uri: image }}
                             accessibilityLabel="image_product"
                             style={styles.imageStyle}
                         />
@@ -171,7 +171,7 @@ const DetailScreen = ({route, navigation}) => {
                                     <View>
                                         <Text
                                             style={styles.containerBottomText}
-                                            // style={globalStyles.text}
+                                        // style={globalStyles.text}
                                         >
                                             Aceptar
                                         </Text>

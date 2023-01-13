@@ -1,7 +1,7 @@
-import {View, Text} from 'react-native';
+import { View, Text, Platform } from 'react-native';
 import React from 'react';
 // import { globalStyles } from "../utils/GlobalStyle";
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
         fontSize: 32,
         fontWeight: 'bold',
         color: 'white',
+        marginTop: Platform.OS === 'android' ? 20 : 0,
     },
     cardShadow: {
         flex: 1,
@@ -25,14 +26,13 @@ const styles = StyleSheet.create({
         elevation: 10,
         shadowColor: '#000',
         shadowOpacity: 0.9,
-        shadowOffset: {width: 0, height: 5},
+        shadowOffset: { width: 0, height: 5 },
         shadowRadius: 5,
 
         backgroundColor: '#334FFA',
         borderRadius: 20,
         marginTop: 10,
         marginHorizontal: 20,
-        // marginBottom: 20,
     },
     text: {
         fontSize: 16,
@@ -53,8 +53,8 @@ const styles = StyleSheet.create({
 const MONTH = 'Diciembre';
 const YOUR_POINTS = 'TUS PUNTOS';
 
-const TotalPointsCard = ({totalPoinst = 10000}) => {
-    const poinst = totalPoinst.toLocaleString('es-ES');
+const TotalPointsCard = ({ totalPoints = 0 }) => {
+    const poinst = totalPoints.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     return (
         <View style={styles.container}>
             <Text style={styles.textCard}>{YOUR_POINTS}</Text>

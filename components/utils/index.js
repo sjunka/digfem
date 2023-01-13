@@ -16,10 +16,10 @@ export const getTotalPoints = movements => {
     }, 0);
 };
 
-export const getMovementsByis_redemptionTrue = movements => {
+export const getTrueMovements = movements => {
     return movements.filter(movement => movement.is_redemption === true);
 };
 
-export const getMovementsByis_redemptionFalse = movements => {
+export const getFalsyMovements = movements => {
     return movements.filter(movement => movement.is_redemption === false);
 };

@@ -1,8 +1,8 @@
-import {View, Text, TouchableWithoutFeedback} from 'react-native';
-import React, {useState} from 'react';
-import {Button} from 'react-native';
+import { View, Text, TouchableWithoutFeedback } from 'react-native';
+import React, { useState } from 'react';
+import { Button } from 'react-native';
 // import { globalStyles } from "../utils/GlobalStyle";
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
@@ -39,8 +39,7 @@ const styles = StyleSheet.create({
     },
 });
 
-// const Footer = ({ filterTrue, filterFalse, notFiltered }) => {
-const Footer = () => {
+const Footer = ({ filterTrue, filterFalse, notFiltered }) => {
     const [isFiltered, setIsFiltered] = useState(true);
     return (
         <View style={styles.container}>
@@ -49,8 +48,8 @@ const Footer = () => {
                     <TouchableWithoutFeedback
                         testID="button-notFiltered"
                         onPress={() => {
-                            //   notFiltered();
-                            //   setIsFiltered(false);
+                            notFiltered();
+                            setIsFiltered(false);
                         }}>
                         <View>
                             <Text
@@ -69,8 +68,8 @@ const Footer = () => {
                         <TouchableWithoutFeedback
                             testID="button-filterFalse"
                             onPress={() => {
-                                // filterFalse();
-                                // setIsFiltered(true);
+                                filterFalse();
+                                setIsFiltered(true);
                             }}>
                             <View>
                                 <Text style={styles.textTodos}>Ganados</Text>
@@ -82,13 +81,13 @@ const Footer = () => {
                         <TouchableWithoutFeedback
                             testID="button-filterFalse"
                             onPress={() => {
-                                // filterFalse();
-                                // setIsFiltered(true);
+                                filterTrue();
+                                setIsFiltered(true);
                             }}>
                             <View>
                                 <Text
                                     style={styles.textTodos}
-                                    //   style={globalStyles.text}
+                                //   style={globalStyles.text}
                                 >
                                     Canjeados
                                 </Text>
