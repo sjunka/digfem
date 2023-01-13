@@ -1,7 +1,7 @@
-import {View, Text} from 'react-native';
+import { View, Text } from 'react-native';
 import React from 'react';
-import {StyleSheet} from 'react-native';
-// import { globalStyles } from "../utils/GlobalStyle";
+import { StyleSheet } from 'react-native';
+
 
 const styles = StyleSheet.create({
     container: {
@@ -14,9 +14,11 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: 'bold',
         color: '#020202',
+        fontFamily: 'Avenir',
     },
     textAccount: {
         fontSize: 16,
+        fontFamily: 'Avenir',
     },
 });
 

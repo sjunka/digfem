@@ -7,7 +7,7 @@ import TotalPointsCard from '../components/TotalPointsCard';
 import MovementsContainer from '../components/Movements';
 import useFetchData from '../hooks/useFetchData';
 
-// import { globalStyles } from "../utils/GlobalStyle";
+
 import {
     getTotalPoints,
     getTrueMovements,
@@ -25,11 +25,7 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 30,
         fontWeight: 'bold',
-    },
-    textMovimientos: {
-        color: '#718096',
-        fontSize: 50,
-        fontWeight: 'bold',
+        fontFamily: 'Avenir',
     },
     container: {
         flex: 1,
@@ -57,6 +53,8 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: '#9B9898',
         marginTop: 20,
+        fontFamily: 'Avenir',
+
     },
 });
 

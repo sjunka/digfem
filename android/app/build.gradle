@@ -80,6 +80,8 @@ import org.apache.tools.ant.taskdefs.condition.Os
 
 project.ext.react = [
     enableHermes: true,  // clean and rebuild if changing
+    //give me the path to assets/fonts folder
+    fonts: [        "../../assets/fonts/Avenir-Regular.ttf"    ]
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"

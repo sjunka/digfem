@@ -6,6 +6,7 @@ import {
     Image,
     Button,
     ScrollView,
+    Platform,
 } from 'react-native';
 import React from 'react';
 import { getDate } from '../components/utils';
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
     detailsContainer: {
         backgroundColor: '#fff',
         height: '100%',
-        paddingBottom: 350,
+        paddingBottom: Platform.OS === 'android' ? 500 : 350,
     },
     imageContainer: {
         elevation: 5,
@@ -84,7 +85,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#334FFA',
         borderRadius: 10,
         padding: 15,
-        marginTop: 10,
+        marginTop: 60,
     },
     containerBottomText: {
         fontSize: 18,
@@ -97,6 +98,7 @@ const styles = StyleSheet.create({
         fontWeight: '900',
         color: 'black',
         marginTop: 20,
+        fontFamily: 'Avenir',
     },
 });
 
@@ -109,7 +111,7 @@ const DetailScreen = ({ route, navigation }) => {
             <SafeAreaView style={styles.container}>
                 <View style={styles.noDataContainer}>
                     <Text
-                        // style={globalStyles.text}
+
                         style={styles.textBold}>
                         {NO_DATA}
                     </Text>
@@ -131,7 +133,7 @@ const DetailScreen = ({ route, navigation }) => {
             <ScrollView>
                 <View style={styles.productContainer}>
                     <Text
-                        // style={globalStyles.text}
+
                         style={styles.textBold}>
                         {product}
                     </Text>
@@ -147,17 +149,17 @@ const DetailScreen = ({ route, navigation }) => {
                     </View>
                     <View style={styles.sectionProductDetails}>
                         <Text
-                            // style={globalStyles.text}
+
                             style={styles.textGray}>
                             Detalles del producto:
                         </Text>
                         <Text
-                            // style={globalStyles.text}
+
                             style={styles.textLarge}>
                             Comprado el {dateFormated}
                         </Text>
                         <Text
-                            // style={globalStyles.text}
+
                             style={styles.textGray}>
                             Con esta compra acumulaste:
                         </Text>
@@ -171,7 +173,7 @@ const DetailScreen = ({ route, navigation }) => {
                                     <View>
                                         <Text
                                             style={styles.containerBottomText}
-                                        // style={globalStyles.text}
+
                                         >
                                             Aceptar
                                         </Text>

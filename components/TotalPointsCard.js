@@ -1,6 +1,6 @@
 import { View, Text, Platform } from 'react-native';
 import React from 'react';
-// import { globalStyles } from "../utils/GlobalStyle";
+
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -12,12 +12,14 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: 'bold',
         color: '#9B9898',
+        fontFamily: 'Avenir',
     },
     textPoints: {
         fontSize: 32,
         fontWeight: 'bold',
         color: 'white',
         marginTop: Platform.OS === 'android' ? 20 : 0,
+        fontFamily: 'Avenir',
     },
     cardShadow: {
         flex: 1,
@@ -38,6 +40,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: 'bold',
         color: 'white',
+        fontFamily: 'Avenir',
     },
 
     pointsThingy: {

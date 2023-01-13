@@ -1,7 +1,7 @@
 import { View, Text, TouchableWithoutFeedback } from 'react-native';
 import React, { useState } from 'react';
 import { Button } from 'react-native';
-// import { globalStyles } from "../utils/GlobalStyle";
+
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         paddingL: 40,
         color: 'white',
+        fontFamily: 'Avenir',
     },
     containerSimple: {
         flexDirection: 'row',
@@ -53,7 +54,7 @@ const Footer = ({ filterTrue, filterFalse, notFiltered }) => {
                         }}>
                         <View>
                             <Text
-                                // style={globalStyles.text}
+
                                 style={styles.textTodos}>
                                 Todos
                             </Text>
@@ -87,7 +88,6 @@ const Footer = ({ filterTrue, filterFalse, notFiltered }) => {
                             <View>
                                 <Text
                                     style={styles.textTodos}
-                                //   style={globalStyles.text}
                                 >
                                     Canjeados
                                 </Text>
