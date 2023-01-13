@@ -1,6 +1,6 @@
-import { View, Text, Image, TouchableWithoutFeedback } from 'react-native';
+import {View, Text, Image, TouchableWithoutFeedback} from 'react-native';
 import React from 'react';
-import { getDate } from './utils';
+import {getDate} from './utils';
 // import {globalStyles} from '../utils/GlobalStyle';
 import {
     ChevronRightIcon,
@@ -8,7 +8,7 @@ import {
     MinusSmallIcon,
 } from 'react-native-heroicons/mini';
 
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
@@ -52,9 +52,11 @@ const styles = StyleSheet.create({
     },
 });
 
-const MovementListItem = ({ productItem = {}, navigation }) => {
-    if (!productItem || Object.keys(productItem).length === 0) return null;
-    const { image, product, createdAt, points, is_redemption } = productItem;
+const MovementListItem = ({productItem = {}, navigation}) => {
+    if (!productItem || Object.keys(productItem).length === 0) {
+        return null;
+    }
+    const {image, product, createdAt, points, is_redemption} = productItem;
     const dateFormated = getDate(createdAt);
     const isRedemptionIcon =
         is_redemption === true ? (
@@ -75,32 +77,22 @@ const MovementListItem = ({ productItem = {}, navigation }) => {
                 <View style={styles.imageContainer}>
                     <Image
                         accessibilityLabel="Image product item"
-                        source={{ uri: image }}
+                        source={{uri: image}}
                         className="w-full h-full rounded-xl"
                         style={styles.imageStyle}
                     />
                 </View>
                 <View style={styles.poductContainer}>
-                    <Text
-
-                        style={styles.textBold}
-                        numberOfLines={1}>
+                    <Text style={styles.textBold} numberOfLines={1}>
                         {product}
                     </Text>
-                    <Text
-                        style={styles.textSmall}
-
-                        numberOfLines={1}>
+                    <Text style={styles.textSmall} numberOfLines={1}>
                         {dateFormated}
                     </Text>
                 </View>
                 <View style={styles.pointsContainer}>
                     {isRedemptionIcon}
-                    <Text
-
-                        style={styles.textBold}>
-                        {points}
-                    </Text>
+                    <Text style={styles.textBold}>{points}</Text>
                     <ChevronRightIcon
                         testID="chevron-icon"
                         size={30}

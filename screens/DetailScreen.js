@@ -9,9 +9,9 @@ import {
     Platform,
 } from 'react-native';
 import React from 'react';
-import { getDate } from '../components/utils';
+import {getDate} from '../components/utils';
 // import {globalStyles} from '../utils/GlobalStyle';
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
         elevation: 5,
         shadowColor: '#000',
         shadowOpacity: 0.9,
-        shadowOffset: { width: 0, height: 15 },
+        shadowOffset: {width: 0, height: 15},
         shadowRadius: 10,
         paddingHorizontal: 20,
         marginTop: 10,
@@ -60,7 +60,6 @@ const styles = StyleSheet.create({
     },
     textGray: {
         color: '#9B9898',
-        fontWeight: 'bold',
         fontSize: 14,
         marginBottom: 5,
         fontWeight: '900',
@@ -104,17 +103,12 @@ const styles = StyleSheet.create({
 
 const NO_DATA = 'No hay data disponible';
 
-const DetailScreen = ({ route, navigation }) => {
-
+const DetailScreen = ({route, navigation}) => {
     if (!route || Object.keys(route.params).length === 0) {
         return (
             <SafeAreaView style={styles.container}>
                 <View style={styles.noDataContainer}>
-                    <Text
-
-                        style={styles.textBold}>
-                        {NO_DATA}
-                    </Text>
+                    <Text style={styles.textBold}>{NO_DATA}</Text>
                     <Button
                         title="Volver"
                         onPress={() => navigation.navigate('Home')}
@@ -124,43 +118,32 @@ const DetailScreen = ({ route, navigation }) => {
         );
     }
 
-    const { image, product, createdAt, points, is_redemption } =
-        route.params.productItem;
+    const {image, product, createdAt, points} = route.params.productItem;
     const dateFormated = getDate(createdAt);
 
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView>
                 <View style={styles.productContainer}>
-                    <Text
-
-                        style={styles.textBold}>
-                        {product}
-                    </Text>
+                    <Text style={styles.textBold}>{product}</Text>
                 </View>
 
                 <View style={styles.detailsContainer}>
                     <View style={styles.imageContainer}>
                         <Image
-                            source={{ uri: image }}
+                            source={{uri: image}}
                             accessibilityLabel="image_product"
                             style={styles.imageStyle}
                         />
                     </View>
                     <View style={styles.sectionProductDetails}>
-                        <Text
-
-                            style={styles.textGray}>
+                        <Text style={styles.textGray}>
                             Detalles del producto:
                         </Text>
-                        <Text
-
-                            style={styles.textLarge}>
+                        <Text style={styles.textLarge}>
                             Comprado el {dateFormated}
                         </Text>
-                        <Text
-
-                            style={styles.textGray}>
+                        <Text style={styles.textGray}>
                             Con esta compra acumulaste:
                         </Text>
                         <Text style={styles.textPoints}>{points} puntos</Text>
@@ -172,9 +155,7 @@ const DetailScreen = ({ route, navigation }) => {
                                     onPress={() => navigation.navigate('Home')}>
                                     <View>
                                         <Text
-                                            style={styles.containerBottomText}
-
-                                        >
+                                            style={styles.containerBottomText}>
                                             Aceptar
                                         </Text>
                                     </View>

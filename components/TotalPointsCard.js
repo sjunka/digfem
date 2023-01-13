@@ -1,7 +1,7 @@
-import { View, Text, Platform } from 'react-native';
+import {View, Text, Platform} from 'react-native';
 import React from 'react';
 
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         elevation: 10,
         shadowColor: '#000',
         shadowOpacity: 0.9,
-        shadowOffset: { width: 0, height: 5 },
+        shadowOffset: {width: 0, height: 5},
         shadowRadius: 5,
 
         backgroundColor: '#334FFA',
@@ -56,8 +56,11 @@ const styles = StyleSheet.create({
 const MONTH = 'Diciembre';
 const YOUR_POINTS = 'TUS PUNTOS';
 
-const TotalPointsCard = ({ totalPoints = 0 }) => {
-    const poinst = totalPoints.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const TotalPointsCard = ({totalPoints = 0}) => {
+    const poinst = totalPoints.toLocaleString(undefined, {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+    });
     return (
         <View style={styles.container}>
             <Text style={styles.textCard}>{YOUR_POINTS}</Text>

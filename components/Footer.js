@@ -1,8 +1,7 @@
-import { View, Text, TouchableWithoutFeedback } from 'react-native';
-import React, { useState } from 'react';
-import { Button } from 'react-native';
+import {View, Text, TouchableWithoutFeedback} from 'react-native';
+import React, {useState} from 'react';
 
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
@@ -40,7 +39,7 @@ const styles = StyleSheet.create({
     },
 });
 
-const Footer = ({ filterTrue, filterFalse, notFiltered }) => {
+const Footer = ({filterTrue, filterFalse, notFiltered}) => {
     const [isFiltered, setIsFiltered] = useState(true);
     return (
         <View style={styles.container}>
@@ -53,11 +52,7 @@ const Footer = ({ filterTrue, filterFalse, notFiltered }) => {
                             setIsFiltered(false);
                         }}>
                         <View>
-                            <Text
-
-                                style={styles.textTodos}>
-                                Todos
-                            </Text>
+                            <Text style={styles.textTodos}>Todos</Text>
                         </View>
                     </TouchableWithoutFeedback>
                 </View>
@@ -86,11 +81,7 @@ const Footer = ({ filterTrue, filterFalse, notFiltered }) => {
                                 setIsFiltered(true);
                             }}>
                             <View>
-                                <Text
-                                    style={styles.textTodos}
-                                >
-                                    Canjeados
-                                </Text>
+                                <Text style={styles.textTodos}>Canjeados</Text>
                             </View>
                         </TouchableWithoutFeedback>
                     </View>

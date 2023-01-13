@@ -1,10 +1,7 @@
-import { View, FlatList, Text, TouchableWithoutFeedback } from 'react-native';
+import {View, FlatList, Text} from 'react-native';
 import React from 'react';
 import MovementListItem from './MovementListItem';
-
-// import {globalStyles} from '../utils/GlobalStyle';
-
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
     textNoData: {
@@ -33,7 +30,7 @@ const styles = StyleSheet.create({
 
 const NO_DATA = 'No hay movimientos';
 
-const Movements = ({ products = [], navigation }) => {
+const Movements = ({products = [], navigation}) => {
     return (
         <View
             style={styles.flatlistContainer}
@@ -45,7 +42,7 @@ const Movements = ({ products = [], navigation }) => {
             <FlatList
                 testID="flatlist-movements"
                 data={products}
-                renderItem={({ item }) => {
+                renderItem={({item}) => {
                     return (
                         <View style={styles.movementListItemContainer}>
                             <MovementListItem

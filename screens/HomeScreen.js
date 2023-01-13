@@ -7,12 +7,11 @@ import TotalPointsCard from '../components/TotalPointsCard';
 import MovementsContainer from '../components/Movements';
 import useFetchData from '../hooks/useFetchData';
 
-
 import {
     getTotalPoints,
     getTrueMovements,
     getFalsyMovements,
-} from "../components/utils";
+} from '../components/utils';
 
 const styles = StyleSheet.create({
     loaderContainer: {
@@ -54,23 +53,20 @@ const styles = StyleSheet.create({
         color: '#9B9898',
         marginTop: 20,
         fontFamily: 'Avenir',
-
     },
 });
 
 const MOVEMENTS = 'TUS MOVIMIENTOS';
 
 const HomeScreen = ({ navigation }) => {
-
-    const URL = 'https://6222994f666291106a29f999.mockapi.io/api/v1/products'
-
+    const URL = 'https://6222994f666291106a29f999.mockapi.io/api/v1/products';
 
     const [products, setProducts] = useState([]);
     const [totalPoints, setTotalPoints] = useState(0);
 
     const [productMutable, setProductMutable] = useState([]);
 
-    const { data, loading, error } = useFetchData(URL);
+    const { data, loading } = useFetchData(URL);
 
     const filteredMovements = () => {
         const movements = getTrueMovements(productMutable);
@@ -86,16 +82,15 @@ const HomeScreen = ({ navigation }) => {
         setProducts(productMutable);
     };
 
-
     useEffect(() => {
         if (data) {
             setProducts(data);
             setProductMutable(data);
         }
-    });
+    }, [data]);
 
     useEffect(() => {
-        const total = getTotalPoints(products);
+        const total = getTotalPoints(productMutable);
         setTotalPoints(total);
     }, [productMutable]);
 
