@@ -30,11 +30,16 @@ npx react-native run-android
 
 Contributors
 
-ex. Sergio Junca  
-ex. [@Dsjunka](https://www.linkedin.com/in/sjunka/)
+Sergio Junca  
+Linkedin [@sjunka](https://www.linkedin.com/in/sjunka/)
 
 ## License
 
 This project is licensed under the [MIT] License - see the LICENSE.md file for details
 
 ## Images
+
+![Screenshot of the project](https://raw.githubusercontent.com/sjunka/digfem/main/assets/fonts/images/WhatsApp%20Image%202023-01-12%20at%208.29.31%20PM.jpeg)
+![Screenshot of the project](<https://raw.githubusercontent.com/sjunka/digfem/main/assets/fonts/images/WhatsApp%20Image%202023-01-12%20at%208.29.27%20PM%20(1).jpeg>)
+![Screenshot of the project](https://raw.githubusercontent.com/sjunka/digfem/main/assets/fonts/images/WhatsApp%20Image%202023-01-12%20at%208.29.28%20PM.jpeg)
+![Screenshot of the project](https://raw.githubusercontent.com/sjunka/digfem/main/assets/fonts/images/WhatsApp%20Image%202023-01-12%20at%208.29.27%20PM.jpeg)
