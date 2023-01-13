@@ -3,6 +3,12 @@ import { render, fireEvent } from "@testing-library/react-native";
 import DetailScreen from "../screens/DetailScreen";
 import { NavigationContainer } from "@react-navigation/native";
 
+import Adapter from 'enzyme-adapter-react-16';
+import Enzyme from 'enzyme';
+import { shallow } from 'enzyme';
+
+Enzyme.configure({ adapter: new Adapter() });
+
 
 jest.mock("react-native/Libraries/Animated/NativeAnimatedHelper");
 
@@ -53,5 +59,12 @@ describe("DetailScreen", () => {
         fireEvent.press(component.getByText("Aceptar"));
         expect(navigation.navigate).toHaveBeenCalledWith("Home");
         expect(navigation.navigate).toHaveBeenCalledTimes(1);
+    });
+});
+
+describe('Footer', () => {
+    it('should match snapshot', () => {
+        const component = shallow(<DetailScreen />);
+        expect(component).toMatchSnapshot();
     });
 });

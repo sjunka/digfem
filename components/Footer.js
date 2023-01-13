@@ -75,7 +75,7 @@ const Footer = ({ filterTrue, filterFalse, notFiltered }) => {
 
                     <View style={styles.buttonSimple}>
                         <TouchableWithoutFeedback
-                            testID="button-filterFalse"
+                            testID="button-filterTrue"
                             onPress={() => {
                                 filterTrue();
                                 setIsFiltered(true);
