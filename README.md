@@ -4,7 +4,7 @@ App demo sobre code challenge
 
 ## Description
 
-RN app mostrando funcionalidades de enrutamiento, props, styling, Platform y React.js en general
+RN app mostrando funcionalidades de enrutamiento, props, styling, Platform y React.js, Flatlist y navegacion interna con data
 
 ## Getting Started
 
